@@ -1,0 +1,5 @@
+{% extends "template.html" %}
+{% block conteudo %}
+<h1>Comandos</h1>
+<a class="btn btn-primary" href="{{ url_for('comando', porta='cercomp', comando='update') }}">Update</a>
+{% endblock %}

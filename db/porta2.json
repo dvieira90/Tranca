@@ -1,0 +1,9 @@
+{
+  "porta":"cegef",
+
+  "users":[
+    {"nome":"Danilo", "tags":["abcd", "1234"]},
+    {"nome":"Alanna", "tags":["fgjh", "85748"]},
+    {"nome":"Beatriz", "tags":["fgjh", "85748"]}
+  ]
+}
