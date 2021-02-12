@@ -3,5 +3,9 @@ from flask import Flask
 
 app = Flask(__name__)
 
-from .api import api
-app.register_blueprint(api)
+
+from .api.node import node
+from .pages.homepage import homepage
+
+app.register_blueprint(homepage)
+app.register_blueprint(node)
