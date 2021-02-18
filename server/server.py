@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-from .pages.homepage import homepage
-from .api.node import node
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
@@ -9,6 +7,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///banco.db'
 
 db = SQLAlchemy(app)
 
+# Classes do banco
 
 class Users(db.Model):
     id = db.Column('id', db.Integer, primary_key=True, autoincrement=True)
@@ -46,6 +45,9 @@ class User_Tags():
     users_id = db.Column(db.Integer, db.ForeignKey(
         'users.id'), nullable=False)
 
+# Rotas
 
-app.register_blueprint(homepage)
-app.register_blueprint(node)
+
+# Main
+if __name__ == '__main__':
+    app.run(debug=True)
