@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-from flask import Flask
+from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
@@ -8,6 +8,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///banco.db'
 db = SQLAlchemy(app)
 
 # Classes do banco
+
 
 class Users(db.Model):
     id = db.Column('id', db.Integer, primary_key=True, autoincrement=True)
@@ -46,6 +47,11 @@ class User_Tags():
         'users.id'), nullable=False)
 
 # Rotas
+
+
+@app.route("/")
+def hello_world():
+    return render_template('index.html', message='Teste')
 
 
 # Main
