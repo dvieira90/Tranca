@@ -9,12 +9,3 @@ alias node='ampy -b 115200 -p /dev/ttyUSB0 put main.py && ampy -b 115200 -p /dev
 
 ## <strong>Copia arquivo para dentro do node
 ampy -b 115200 -p /dev/ttyUSB0 put main.py
-
-<button style='border-radius: 7px; padding: 10px; background-color: #1cbe70'>Teste</button>
-
-<script>
-    let bot = document.querySelect('button')
-    bot.addEventListener('click', function (){
-        bot.style.property.backgroundColor = '#3f51b' 
-    })
-</script>
